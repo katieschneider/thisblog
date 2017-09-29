@@ -1,0 +1,38 @@
+---
+title: Histograms
+author: Katherine Schneider
+date: '2017-09-28'
+slug: histograms
+categories:
+  - R
+tags:
+  - R Markdown
+---
+These are the pakages we will need to make the intended histogram:
+
+
+```{r warning=FALSE,message=FALSE}
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+```
+
+Making a histogram;
+First we extracted the data we wanted to appear on our graph
+
+```{r}
+query<-"SELECT weight
+FROM Master"
+
+result<-sqldf(query)
+
+```
+
+From there its similar to making a scatterplot, just approiate alterations where necessary, i.e. introduction of "bin" function 
+
+```{r}
+ggplot()+
+  geom_histogram(data=result,aes(x=weight),color="yellow",fill="white",bins=50)+
+                   ggtitle("Body Weight Distribution for Baseball Players")
+```
+

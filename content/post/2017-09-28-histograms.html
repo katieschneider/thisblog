@@ -1,0 +1,28 @@
+---
+title: Histograms
+author: Katherine Schneider
+date: '2017-09-28'
+slug: histograms
+categories:
+  - R
+tags:
+  - R Markdown
+---
+
+
+
+<p>These are the pakages we will need to make the intended histogram:</p>
+<pre class="r"><code>library(Lahman)
+library(sqldf)
+library(ggplot2)</code></pre>
+<p>Making a histogram; First we extracted the data we wanted to appear on our graph</p>
+<pre class="r"><code>query&lt;-&quot;SELECT weight
+FROM Master&quot;
+
+result&lt;-sqldf(query)</code></pre>
+<p>From there its similar to making a scatterplot, just approiate alterations where necessary, i.e. introduction of “bin” function</p>
+<pre class="r"><code>ggplot()+
+  geom_histogram(data=result,aes(x=weight),color=&quot;yellow&quot;,fill=&quot;white&quot;,bins=50)+
+                   ggtitle(&quot;Body Weight Distribution for Baseball Players&quot;)</code></pre>
+<pre><code>## Warning: Removed 854 rows containing non-finite values (stat_bin).</code></pre>
+<p><img src="/post/2017-09-28-histograms_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>

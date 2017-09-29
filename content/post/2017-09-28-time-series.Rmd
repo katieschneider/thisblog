@@ -1,0 +1,42 @@
+---
+title: Time Series
+author: Katherine Schneider
+date: '2017-09-28'
+slug: time-series
+categories:
+  - R
+tags:
+  - R Markdown
+---
+These are the pakages we will need to make the intended time series plot;
+
+
+```{r warning=FALSE,message=FALSE}
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+```
+
+Now, say we wanted to see progessive change over time- we would contruct a time series graph. In this case we wanted to see Babe Ruths number of homeruns over the years;
+Note- time is always on the x axis and the changing varaible will be on the y axis
+Extracting the data;
+
+```{r}
+query<-"SELECT yearID,HR
+FROM Batting
+WHERE playerID='ruthba01'"
+
+result<-sqldf(query)
+```
+
+Now, let's visualize this;
+
+```{r}
+ggplot()+
+  geom_line(data=result,aes(x=yearID,y=HR))+
+  geom_point(data=result,aes(x=yearID,y=HR))+
+  ggtitle("Ruth's Homerun Total Through the Years")+
+  xlab("year")+
+  ylab("homeruns")
+```
+

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Katherine Schneider&#39;s Blog</title>
+    <link>https://example.org/post/</link>
+    <description>Recent content in Posts on Katherine Schneider&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
+    <lastBuildDate>Thu, 28 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://example.org/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Histograms</title>
+      <link>https://example.org/post/histograms/</link>
+      <pubDate>Thu, 28 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/post/histograms/</guid>
+      <description>These are the pakages we will need to make the intended histogram:
+library(Lahman)library(sqldf)library(ggplot2)Making a histogram; First we extracted the data we wanted to appear on our graph
+query&amp;lt;-&amp;quot;SELECT weightFROM Master&amp;quot;result&amp;lt;-sqldf(query)From there its similar to making a scatterplot, just approiate alterations where necessary, i.e. introduction of “bin” function
+ggplot()+geom_histogram(data=result,aes(x=weight),color=&amp;quot;yellow&amp;quot;,fill=&amp;quot;white&amp;quot;,bins=50)+ggtitle(&amp;quot;Body Weight Distribution for Baseball Players&amp;quot;)## Warning: Removed 854 rows containing non-finite values (stat_bin).</description>
+    </item>
+    
+    <item>
+      <title>Scatterplots</title>
+      <link>https://example.org/post/scatterplots/</link>
+      <pubDate>Thu, 28 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/post/scatterplots/</guid>
+      <description>These are the pakages we will need to make the intended scatterplot;
+library(Lahman)library(sqldf)library(ggplot2)Scatterplots were introduced today. The lesson was started with the task of finding all homeruns and strikeouts in the MBL, then narrowing it down to the best homerun records for each player (a sum of 400 or more). This is the extracted data wanted on the scatterplot;
+query&amp;lt;-&amp;quot;SELECT playerID,sum(HR) AS career_HR,sum(SO) AS career_SOFROM BattingGROUP BY playerIDHAVING sum(HR)&amp;gt;=400&amp;quot;result&amp;lt;-sqldf(query)In order to visualize this into an easy-to-read scatter plot we ran the following;</description>
+    </item>
+    
+    <item>
+      <title>Time Series</title>
+      <link>https://example.org/post/time-series/</link>
+      <pubDate>Thu, 28 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/post/time-series/</guid>
+      <description>These are the pakages we will need to make the intended time series plot;
+library(Lahman)library(sqldf)library(ggplot2)Now, say we wanted to see progessive change over time- we would contruct a time series graph. In this case we wanted to see Babe Ruths number of homeruns over the years; Note- time is always on the x axis and the changing varaible will be on the y axis Extracting the data;</description>
+    </item>
+    
+  </channel>
+</rss>
