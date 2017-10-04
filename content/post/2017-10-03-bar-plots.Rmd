@@ -1,0 +1,42 @@
+---
+title: Bar Plots
+author: Katherine Schneider
+date: '2017-10-03'
+slug: bar-plots
+categories:
+  - R
+tags:
+  - R Markdown
+---
+
+To begin, let's make sure we have and bring in all the correct packages,
+```{r warning=FALSE,message=FALSE}
+library(Lahman)
+library(ggplot2)
+library(sqldf)
+library(flexdashboard)
+```
+
+Now, what information do we want to extract for our bar plot-
+
+```{r}
+query<-"SELECT name,HR
+FROM Teams
+WHERE yearID=1980
+ORDER BY HR"
+
+result<-sqldf(query)
+```
+
+Next, in a similar process with previous plots made, let's turn this information into an easy-to-read bar plot. Today we started to use result$name and introduced coord_flip() to ensure it did not do any additional math between our extracted data and our table 
+```{r}
+ggplot()+
+  geom_bar(data=result,aes(x=name,y=HR),stat='identity',color='blue',fill='white')+
+  coord_flip()+
+  ylab('homeruns')+
+  xlab('team')+
+  ggtitle('1980 Team Homerun Distribution')
+
+result$name<-factor(result$name,levels=result$name)
+```
+

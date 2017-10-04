@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Katherine Schneider&#39;s Blog</title>
-    <link>https://example.org/tags/</link>
+    <link>https://katherineschneider.netlify.com/tags/</link>
     <description>Recent content in Tags on Katherine Schneider&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
-    <lastBuildDate>Thu, 28 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Oct 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://katherineschneider.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>R Markdown</title>
-      <link>https://example.org/tags/r-markdown/</link>
-      <pubDate>Thu, 28 Sep 2017 00:00:00 +0000</pubDate>
+      <link>https://katherineschneider.netlify.com/tags/r-markdown/</link>
+      <pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/tags/r-markdown/</guid>
+      <guid>https://katherineschneider.netlify.com/tags/r-markdown/</guid>
       <description></description>
     </item>
     

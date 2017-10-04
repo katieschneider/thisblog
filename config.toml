@@ -12,10 +12,10 @@ theme = "hugo-minimalist-theme"
 
 [params]
     site_author = "Katherine Schneider"
-    site_description = "The awesome blog of John Doe."
+    site_description = "The Data Science Blog of Katie Schneider."
     location = "Mercyhurst University"
     # Link custom assets relative to /static
-    avatar = "img/profile2.png"
+    avatar = "img/profile.png"
     header_background = "img/stars.jpg"
     header_title = "Katie's Blog"
     copyright = "Powered by [Hugo](http://gohugo.io)."
