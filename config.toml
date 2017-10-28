@@ -16,7 +16,7 @@ theme = "hugo-minimalist-theme"
     location = "Mercyhurst University"
     # Link custom assets relative to /static
     avatar = "img/profile.png"
-    header_background = "img/alaska.jpg"
+    header_background = "img/stars.jpg"
     header_title = "Katie's Blog"
     copyright = "Powered by [Hugo](http://gohugo.io)."
     custom_css = []
