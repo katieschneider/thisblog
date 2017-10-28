@@ -13,13 +13,22 @@
     
     
     <item>
+      <title>Excel Work in Data Science</title>
+      <link>https://katherineschneider.netlify.com/post/excel-work-in-data-science/</link>
+      <pubDate>Thu, 26 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://katherineschneider.netlify.com/post/excel-work-in-data-science/</guid>
+      <description>Content has shifted in my Data Science class recently as we have began extensive work in excel. Excel work began by writing basic formulas such as, ‘=randbetween(1,10)’ and exploring stantard deviation of populations and averages. Also using formulas such as =SQRT(A2-$D354)^2 to determine each cells distance from the average. - The $ used in the formula helps when applying the formula to the whole data set. It lets the first cell, A2, to change as we copy and paste but ensure we are subtracting from the same cell,D354, each time.</description>
+    </item>
+    
+    <item>
       <title>Syrian Crisis- U.S. and Russian Response</title>
       <link>https://katherineschneider.netlify.com/post/syrian-crisis-u-s-and-russian-response/</link>
       <pubDate>Thu, 26 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://katherineschneider.netlify.com/post/syrian-crisis-u-s-and-russian-response/</guid>
-      <description>This post will summarize two articles that provided interesting insights into the positions and actions taken by Russia and the United States, while offering background of the Syrian conflict. The articles used include,  1.“Armed Conflict in Syria: Overview and U.S.Response” Written by,
- Christopher M. Blanchard-Coordinator Specialist in Middle Eastern Affairs, Carla E. Humud-Analyst in Middle Eastern and African Affairs, Mary Beth D. Nikitin-Specialist in Nonproliferation  2.“Russia’s Interests in the Syrian Conflict:Power, Prestige, and Profit” Written by,</description>
+      <description>This post will summarize two articles that provided interesting insights into the positions and actions taken by Russia and the United States, while offering background of the Syrian conflict. The articles used include, 1.“Armed Conflict in Syria: Overview and U.S.Response”
+ Written by,  Christopher M. Blanchard-Coordinator Specialist in Middle Eastern Affairs, Carla E. Humud-Analyst in Middle Eastern and African Affairs, Mary Beth D. Nikitin-Specialist in Nonproliferation 2.“Russia’s Interests in the Syrian Conflict:Power, Prestige, and Profit” Written by,</description>
     </item>
     
     <item>

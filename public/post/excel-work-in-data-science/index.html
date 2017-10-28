@@ -45,9 +45,9 @@
         <article class="post">
             <a class="btn home" href="https://katherineschneider.netlify.com/" title="Back to home">&laquo; Back to home</a>
             
-<h1><a href="https://katherineschneider.netlify.com/post/histograms/" title="Histograms">Histograms</a></h1>
+<h1><a href="https://katherineschneider.netlify.com/post/excel-work-in-data-science/" title="Excel Work in Data Science">Excel Work in Data Science</a></h1>
 
-<footer class="post-info">Posted on <span class="post-meta"><time datetime="2017.09.28">2017.09.28</time>
+<footer class="post-info">Posted on <span class="post-meta"><time datetime="2017.10.26">2017.10.26</time>
 
     &middot; Tagged in
         
@@ -58,21 +58,8 @@
 </span>
 </footer>
 
-            <p>These are the pakages we will need to make the intended histogram:</p>
-<pre class="r"><code>library(Lahman)
-library(sqldf)
-library(ggplot2)</code></pre>
-<p>Making a histogram; First we extracted the data we wanted to appear on our graph</p>
-<pre class="r"><code>query&lt;-&quot;SELECT weight
-FROM Master&quot;
-
-result&lt;-sqldf(query)</code></pre>
-<p>From there its similar to making a scatterplot, just approiate alterations where necessary, i.e. introduction of “bin” function</p>
-<pre class="r"><code>ggplot()+
-  geom_histogram(data=result,aes(x=weight),color=&quot;yellow&quot;,fill=&quot;white&quot;,bins=50)+
-                   ggtitle(&quot;Body Weight Distribution for Baseball Players&quot;)</code></pre>
-<pre><code>## Warning: Removed 854 rows containing non-finite values (stat_bin).</code></pre>
-<p><img src="/post/2017-09-28-histograms_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+            <p>Content has shifted in my Data Science class recently as we have began extensive work in excel. Excel work began by writing basic formulas such as, ‘=randbetween(1,10)’ and exploring stantard deviation of populations and averages. Also using formulas such as =SQRT(A2-$D354)^2 to determine each cells distance from the average. - The $ used in the formula helps when applying the formula to the whole data set. It lets the first cell, A2, to change as we copy and paste but ensure we are subtracting from the same cell,D354, each time.</p>
+<p>In our second day of excel we began work with RStudio then brought that over to excel by making it a csv file and saving it to the desktop. In excel we retrieved the data by going under the ‘data’ tab, clicking ‘from text’, bringing it in, choosing the ‘distilled’ data set and changing the delimiters from tabs to commas. We did this with two sets of data, one was a salaries by college type and the second was salaries by college region. In the salaries by college type excel sheet we wanted to bring each colleges region over - Started by making room through adding another column between A and B titled ‘Region’ Next was to just write the formula, =VLOOKUP(A2,region!salaries_by_region,2,FALSE) Apply to all cells occupied in the A column and we resulted with this,</p>
 
             
 

@@ -1,0 +1,15 @@
+---
+title: Excel Work in Data Science
+author: Katherine Schneider
+date: '2017-10-26'
+slug: excel-work-in-data-science
+categories:
+  - R
+tags:
+  - R Markdown
+---
+
+
+
+<p>Content has shifted in my Data Science class recently as we have began extensive work in excel. Excel work began by writing basic formulas such as, ‘=randbetween(1,10)’ and exploring stantard deviation of populations and averages. Also using formulas such as =SQRT(A2-$D354)^2 to determine each cells distance from the average. - The $ used in the formula helps when applying the formula to the whole data set. It lets the first cell, A2, to change as we copy and paste but ensure we are subtracting from the same cell,D354, each time.</p>
+<p>In our second day of excel we began work with RStudio then brought that over to excel by making it a csv file and saving it to the desktop. In excel we retrieved the data by going under the ‘data’ tab, clicking ‘from text’, bringing it in, choosing the ‘distilled’ data set and changing the delimiters from tabs to commas. We did this with two sets of data, one was a salaries by college type and the second was salaries by college region. In the salaries by college type excel sheet we wanted to bring each colleges region over - Started by making room through adding another column between A and B titled ‘Region’ Next was to just write the formula, =VLOOKUP(A2,region!salaries_by_region,2,FALSE) Apply to all cells occupied in the A column and we resulted with this,</p>
