@@ -1,0 +1,15 @@
+---
+title: Other Data Science Work
+author: Katherine Schneider
+date: '2017-12-09'
+slug: other-data-science-work
+categories:
+  - R
+tags:
+  - R Markdown
+---
+
+Linked is another website I made pertaining to data science with the use of SQL, published through github,
+https://katieschneider.github.io/website/
+
+In this project, we mostly stuck to baseball statistics in R through sqldf.
