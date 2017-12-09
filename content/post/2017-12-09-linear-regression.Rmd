@@ -51,4 +51,4 @@ squared_error<-error*error
 #####7. Using the steps above under testing you will finally result with the final Mean Squared Error;
 mse<-mean(squared_error)
 
-####Mean Squared Error= 22626378
+Mean Squared Error= 22626378
