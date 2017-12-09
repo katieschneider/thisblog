@@ -1,0 +1,54 @@
+---
+title: Linear Regression
+author: Katherine Schneider
+date: '2017-12-09'
+slug: linear-regression
+categories:
+  - R
+tags:
+  - R Markdown
+---
+####Given an excel sheet of cars and 26 columns of descriptions of, we were tasked to find a formula for predicting the price of a car based on its length. 
+
+
+#####1. First thing you need to do is read the csv file into R;
+auto<-read.csv('auto.csv',header=TRUE,stringsAsFactors=FALSE)
+
+
+#####2. Since we were just looking at the price and length of the car, you need to just focus on the 'price' and the 'length' column, this is done through selection through column number;
+auto<-auto[ ,c(11,26)]
+
+
+#####3. This next step is a sort of insurance policy, just run these on each column to ensure there are no strange numbers and to make sure you get a sum of 0 when you run the last two formulas;
+unique(auto$length)
+
+unique(auto$price)
+
+sum(is.na(auto$length))
+
+sum(is.na(auto$price))
+
+
+#####4. Next, since the set is already randomized, you need to break it into a training and a testing set to ensure accurary;
+train<-auto[1:150, ]
+
+test<-auto[151:201, ]
+
+
+#####5. Next, you can finally build your model with the training set;
+model<-lm(price~length,data=train)
+
+
+#####6. We can finally test;
+
+test$prediction<-403.7*test$length-57092.1
+
+error<-test$prediciton-test$price
+
+squared_error<-error*error
+
+
+#####7. Using the steps above under testing you will finally result with the final Mean Squared Error;
+mse<-mean(squared_error)
+
+####Mean Squared Error= 22626378
